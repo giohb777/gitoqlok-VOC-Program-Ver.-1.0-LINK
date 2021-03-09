@@ -1,0 +1,194 @@
+{
+  "qProperty": {
+    "qInfo": {
+      "qId": "961c62bd-bdcb-4a6e-82bd-9511fe843b6b",
+      "qType": "sheet"
+    },
+    "qMetaDef": {
+      "title": "Definitions",
+      "description": ""
+    },
+    "rank": 11,
+    "thumbnail": {
+      "qStaticContentUrlDef": {}
+    },
+    "columns": 24,
+    "rows": 18,
+    "cells": [
+      {
+        "name": "ARqVDrv",
+        "type": "text-image",
+        "col": 0,
+        "row": 1,
+        "colspan": 24,
+        "rowspan": 17,
+        "bounds": {
+          "y": 5.555555555555555,
+          "x": 0,
+          "width": 100,
+          "height": 94.44444444444444
+        }
+      },
+      {
+        "name": "krYER",
+        "type": "swr-sense-navigation",
+        "col": 22,
+        "row": 0,
+        "colspan": 2,
+        "rowspan": 1,
+        "bounds": {
+          "x": 91.66666666666666,
+          "y": 0,
+          "width": 8.333333333333332,
+          "height": 5.5555555555555545
+        }
+      }
+    ],
+    "qChildListDef": {
+      "qData": {
+        "title": "/title"
+      }
+    },
+    "gridResolution": "small",
+    "layoutOptions": {
+      "extendable": true,
+      "sheetMode": "RESPONSIVE"
+    },
+    "height": 150
+  },
+  "qChildren": [
+    {
+      "qProperty": {
+        "qInfo": {
+          "qId": "ARqVDrv",
+          "qType": "text-image"
+        },
+        "qMetaDef": {},
+        "qHyperCubeDef": {
+          "qDimensions": [],
+          "qMeasures": [],
+          "qInterColumnSortOrder": [],
+          "qInitialDataFetch": [],
+          "qReductionMode": "N",
+          "qMode": "S",
+          "qPseudoDimPos": -1,
+          "qNoOfLeftDims": -1,
+          "qMaxStackedCells": 5000,
+          "qCalcCond": {},
+          "qTitle": {},
+          "qCalcCondition": {
+            "qCond": {},
+            "qMsg": {}
+          },
+          "qColumnOrder": [],
+          "qExpansionState": [],
+          "qLayoutExclude": {
+            "qHyperCubeDef": {
+              "qDimensions": [],
+              "qMeasures": [],
+              "qInterColumnSortOrder": [],
+              "qInitialDataFetch": [],
+              "qReductionMode": "N",
+              "qMode": "S",
+              "qPseudoDimPos": -1,
+              "qNoOfLeftDims": -1,
+              "qMaxStackedCells": 5000,
+              "qCalcCond": {},
+              "qTitle": {},
+              "qCalcCondition": {
+                "qCond": {},
+                "qMsg": {}
+              },
+              "qColumnOrder": [],
+              "qExpansionState": []
+            }
+          }
+        },
+        "showTitles": false,
+        "title": "",
+        "subtitle": "",
+        "footnote": "",
+        "showDetails": false,
+        "responsive": "all",
+        "markdown": "%[**·       ~Net Promoter Score \\(NPS\\):~**   NPS is calculated based on responses to a single question: How likely is it that you would recommend our company? The scoring for this answer is based on a 0 to 10 scale. An NPS can be as low as −100 \\(every respondent is a\"detractor\"\\) or as high as +100 \\(every respondent is a\"promoter\"\\). NPS has been widely adopted with more than two thirds of Fortune 1000 companies using the metric to gauge the loyalty of a firm's @[customer relationships](https://en.wikipedia.org/wiki/Customer\\_relationship\\_management).](4)^[%[\n**~·       Detractors:~** Contacts who respond to the NPS Question with a score of 0 to 6. They are believed to be less likely to exhibit the value\\-creating behaviors and are generally considered unhappy customers.](4)](inherit)^[%[\n**~·       Passive:~** Contacts who respond to the NPS Question with a score of 7 and 8. Their behavior falls between Promoters and Detractors. They are generally satisfied but vulnerable to competitor offerings. ](4)](inherit)^[%[\n~**·       Promoters:** ~Contacts who respond to the NPS Question with a score of 9 to 10. They are considered likely to exhibit value\\-creating behaviors, such as buying more, remaining customers for longer, and making more positive referrals to other potential customers. ](4)](inherit)^[%[\n~**·       CSAT Score:** ~It is the average score of all touch point questions \\(Ie, except NPS question\\).The scoring for this answer is based on a 0 to 10 scale. The higher the score the better customer satisfaction is. ](4)](inherit)^[%[\n~**·       Customer Emotional Curve:** ~It is a visual graph based on customer journey mapping depicting customer satisfaction based on each touch point asked about in the Customer Satisfactions survey. It tells the reader of the data where there is Pleasure \\(ie, customers are setting a high score for the identified touch point\\)and where there is Pain \\(ie, customers are setting a low score for the identified touch point\\). Drawing the line happens at 8/10 meaning a touch point scoring higher than 8 is considered providing a pleasurable customer experience.](4)](inherit)^[%[\n**~·       Customer Touchpoint: ~**Also known as contact point is business jargon for any encounter where customers and business engage to exchange information, provide service, or handle transactions.](4)](inherit)^[%[\n**~·       Positive Drivers: ~**Touchpoints and matters affecting positively customer satisfaction and have direct implication in increasing overall NPS Score. These are drivers affecting customers to become loyal and refer new business to us. ](4)](inherit)^[%[\n~**·       Negative Drivers:** ~Touchpoints and matters affecting negatively customer satisfaction and have direct implication in decreasing overall NPS Score. They are generally drivers affecting customers to become unhappy. These drivers trigger the action plan that should be set on the voice of customer program by identifying the key areas that should be worked on to improve and grow the NPS. ](4)](inherit)^[%[\n](4)](inherit)^[~%[**· **](4)~%[~**CES:**~ Customer Effort Score](4)](inherit)",
+        "images": [],
+        "background": {
+          "isUsed": false,
+          "size": "auto",
+          "position": "topLeft",
+          "url": {}
+        },
+        "visualization": "text-image"
+      },
+      "qChildren": []
+    },
+    {
+      "qProperty": {
+        "qInfo": {
+          "qId": "krYER",
+          "qType": "swr-sense-navigation"
+        },
+        "qMetaDef": {},
+        "showTitles": false,
+        "title": "",
+        "subtitle": "",
+        "footnote": "",
+        "showDetails": false,
+        "props": {
+          "buttonLabel": "Main Menu",
+          "buttonStyle": "danger",
+          "fullWidth": true,
+          "buttonAlign": "center",
+          "isButtonMultiLine": true,
+          "buttonIcon": "",
+          "action": "gotoSheet",
+          "sheetId": "",
+          "selectedSheet": "416e1ed9-9f6f-4b14-930b-772fa6430d96",
+          "selectedStory": "",
+          "websiteUrl": "",
+          "isActionsBefore": true,
+          "actionBefore1": "none",
+          "field1": "",
+          "variable1": "",
+          "value1": "",
+          "value1Desc": null,
+          "bookmark1": "",
+          "softlock1": false,
+          "actionBefore2": "none",
+          "field2": "",
+          "variable2": "",
+          "value2": "",
+          "value2Desc": "",
+          "bookmark2": "",
+          "softlock2": false
+        },
+        "visualization": "swr-sense-navigation",
+        "version": "0.8.1",
+        "extensionMeta": {
+          "translationKey": "",
+          "icon": "puzzle",
+          "iconChar": "g",
+          "isLibraryItem": true,
+          "visible": true,
+          "name": "Sheet Navigation & Actions",
+          "description": "Sense Sheet Navigation + Actions visualization extension for Qlik Sense.",
+          "template": "swr-sense-navigation",
+          "isThirdParty": true,
+          "type": "visualization",
+          "version": "0.8.1",
+          "preview": "swr-sense-navigation.png",
+          "author": "Stefan Walther",
+          "license": "MIT",
+          "homepage": "http://github.com/stefanwalther/sense-navigation",
+          "keywords": "qlik-sense, visualization",
+          "repository": "https://github.com/stefanwalther/sense-navigation",
+          "dependencies": {
+            "qlik-sense": ">=2.1.1"
+          },
+          "previewIconURL": "../extensions/swr-sense-navigation/swr-sense-navigation.png"
+        }
+      },
+      "qChildren": []
+    }
+  ]
+}

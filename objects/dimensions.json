@@ -1,0 +1,75 @@
+[
+  {
+    "qInfo": {
+      "qId": "UqwgSW",
+      "qType": "dimension"
+    },
+    "qDim": {
+      "qGrouping": "N",
+      "qFieldDefs": [
+        "= if (  family = 'single_choice' AND  simple_text =  'No, you are my favorite', 'No, you are my favorite' , \r\n\n\t\tif (  family = 'single_choice' AND simple_text =  'Maybe Yes'  , 'Maybe Yes' , \n\n\t\t\tif (  family = 'single_choice' AND simple_text =  'Definitely Yes' , 'Definitely Yes'  \n\n\t\t) ))\n        \n        \n        \n"
+      ],
+      "qFieldLabels": [
+        "SU Question"
+      ],
+      "title": "SU Question",
+      "coloring": {
+        "changeHash": "0.45061502823542865",
+        "colorMapRef": "UqwgSW"
+      }
+    },
+    "qMetaDef": {
+      "title": "SU Question",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "Zw",
+      "qType": "dimension"
+    },
+    "qDim": {
+      "qGrouping": "N",
+      "qFieldDefs": [
+        "= if (   Score <=6  , 'Detractors' , \r\n\n\t\tif (   Score >6 AND  Score <9 , 'Passives' , \n\n\t\t\tif (  Score >8 , 'Promoters'  \n\n\t\t) ))"
+      ],
+      "qFieldLabels": [
+        "NPS"
+      ],
+      "title": "NPS",
+      "coloring": {
+        "changeHash": "0.17301827878126375",
+        "colorMapRef": "Zw"
+      }
+    },
+    "qMetaDef": {
+      "title": "NPS",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "xfpptj",
+      "qType": "dimension"
+    },
+    "qDim": {
+      "qGrouping": "H",
+      "qFieldDefs": [
+        "Parent Entity",
+        "Entity"
+      ],
+      "qFieldLabels": [],
+      "title": "ParentEntity-Entity",
+      "coloring": {
+        "changeHash": "0.37564963866248813"
+      }
+    },
+    "qMetaDef": {
+      "title": "ParentEntity-Entity",
+      "description": "",
+      "tags": []
+    }
+  }
+]

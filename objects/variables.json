@@ -1,0 +1,687 @@
+[
+  {
+    "qInfo": {
+      "qId": "0d13dff3-e628-4e25-b6da-9fdad1be29b1",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "v_Customer_Type",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "if (  $(v_Matrix_Score)  <=6  , 'Detractor'    ,\n\n\n\t\tif (   $(v_Matrix_Score) >6 and   $(v_Matrix_Score)<9  , 'Passives'    ,\n        \n        \n\t\t\tif (   $(v_Matrix_Score) >=9 , 'Promoters'  \n\n\n)\n)\n)",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "0ede6068-5f26-4748-910d-7ebb32df100d",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "v_Sorting _CSAT",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "NUM (( AGGR ( avg({$<  family = {'matrix'} , [Business Unit] =- {'Departments'}  >}   IF (  not (WildMatch ( heading  ,'*recommend*')),  Score )   ) , [__KEY_metadata])),'0.0')\n",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "1121aa86-2b9e-4945-9530-bc54994d1ab3",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "v_Responses",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "\r\npick (\n\n$(v_Switch_Option_BU_SU)\n\n\n,max({$<  Year ={$(v_Max_Year)} , [Entity Type] = {'Business Unit'} >}  total   ) \n,MAX({$<  Year ={$(v_Max_Year)} , [Entity Type] = {'Service Unit'} >}  total   )\n,max({$<  Year ={$(v_Max_Year)}  >}  total   )\n\n\n)\n\n\n",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "11829013-d2ce-4fd6-8d96-ccbe475b02aa",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "v_Selected_Dimension_One",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "1",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "124d3be5-6581-4cab-a25c-b260ad79508d",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "v_Max_Year_LY",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "= if(IsNull(GetFieldSelections([Year])),\r\n\nMax({1<Year=P(Year)>}Year)-1\n,\nMax({1<Year=P(Year)>}Year)-1\n\n)",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "146c7549-cbae-4a0c-8c41-28672d71e5c7",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "v_CES_Score_BU",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "if (  family = 'matrix' and WildMatch(heading,'*business with us*') , \r\n   \n   NUM (( AGGR ( avg({$<  Year ={$(v_Max_Year)} ,  [Entity Type] = {'Business Unit'}  >}    Score )   , [__KEY_metadata] , Entity , survey_id )),'0.0'))",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "192a002a-455c-4253-be18-6505f54f7083",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vID",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "182523045",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "19398b11-f741-4195-b6f2-24365d70b5a8",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vTodaysDate",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "6/26/2019"
+  },
+  {
+    "qInfo": {
+      "qId": "1d364297-4220-4d5e-bccf-f6b308b71336",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vTodaysDateYear",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "2019"
+  },
+  {
+    "qInfo": {
+      "qId": "242a2197-d93b-46ed-a241-edeecdef3380",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vURL",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "https://api.surveymonkey.com/v3/surveys/182523045/responses/bulk",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "29a1df57-2752-472d-b05d-1c47a7779b5c",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "v_Max_Month_ID",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "= if\n(IsNull(GetFieldSelections([Year])),\nif\n(IsNull(GetFieldSelections([Month])),\nMax({1<Year=P(Year),Quarter=P(Quarter),[Month Year]=P([Month Year]),[Month Num]=P([Month Num]),Month=P(Month)>}[Month ID]),\nMax({1<Year=P(Year),Quarter=P(Quarter),[Month Year]=P([Month Year]),[Month Num]=P([Month Num]),Month=P(Month)>}[Month ID])\n)\n,\nMax({1<Year=P(Year),Quarter=P(Quarter),[Month Year]=P([Month Year]),[Month Num]=P([Month Num]),Month=P(Month)>}[Month ID])\n\n)",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "2fdb62a5-111d-4ae9-b5c8-ae511ba5f504",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "i",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "1",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "30beda00-1367-48c9-b431-0d346e02f591",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "v_CSAT_Drivers",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "pick (\r\n\n$(v_Switch_Option_BU_SU)\n\n\n,avg((aggr ( nodistinct avg({$< Year ={$(v_Max_Year)}   , [Question Type] = {'CSAT'} , [Entity Type] = {'Business Unit'}  >}   Score) ,  [__KEY_metadata] )))\n,avg((aggr ( nodistinct avg({$< Year ={$(v_Max_Year)}   , [Question Type] = {'CSAT'} , [Entity Type] = {'Service Unit'}  >}   Score) ,  [__KEY_metadata] )))\n,avg((aggr ( nodistinct avg({$< Year ={$(v_Max_Year)}   , [Question Type] = {'CSAT'} >}   Score) ,  [__KEY_metadata] )))\n\n\n\n)\n\n\n",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "38b69ed6-4682-41c2-bf38-e3e4050fe4fb",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "v_CSAT_Score",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "pick (\r\n\n$(v_Switch_Option_BU_SU)\n\n\n,avg({$<  Year ={$(v_Max_Year)}   , [Question Type] = {'CSAT'} , [Entity Type] = {'Business Unit'} >}    Score )\n,avg({$<  Year ={$(v_Max_Year)}   , [Question Type] = {'CSAT'} , [Entity Type] = {'Service Unit'} >}    Score )\n,avg({$<  Year ={$(v_Max_Year)}   , [Question Type] = {'CSAT'} >}    Score )\n\n\n)",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "412eb487-2aa4-4b2d-99e3-f9db10e788d0",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "v_Len_AGGR_Manual_Entry",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "=LEN(AGGR( nodistinct ONLY   ({<   [Business Unit] =- {'Departments'} >}   IF ( WildMatch ( heading  ,'*Contact Information*'), TextBetween(simple_text, 'E-mail Address |', '')  ))   ,[__KEY_metadata]  ))",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "43727c86-b0ba-4f86-82fd-b511f934c093",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "v_Max_Year_LY_2",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "= if(IsNull(GetFieldSelections([Year])),\r\n\nMax({1<Year=P(Year)>}Year)-2\n,\nMax({1<Year=P(Year)>}Year)-2\n\n)",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "4997940c-2790-42d8-bac5-2fca531fdf14",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "v_Promoters",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "\r\npick (\n\n$(v_Switch_Option_BU_SU)\n\n\n,COUNT(DISTINCT{$< Year ={$(v_Max_Year)} , [Question Type] = {'NPS'} , Score ={\">8\"} , [Entity Type] = {'Business Unit'}>}     [__KEY_metadata]  &  '|' & Entity  )   \n\n,COUNT(DISTINCT{$< Year ={$(v_Max_Year)} , [Question Type] = {'NPS'} , Score ={\">8\"} , [Entity Type] = {'Service Unit'}>}     [__KEY_metadata]  &  '|' & Entity  )   \n \n,COUNT(DISTINCT{$< Year ={$(v_Max_Year)} , [Question Type] = {'NPS'}, Score ={\">8\"}  >}     [__KEY_metadata]  &  '|' & Entity  )   \n\n)\n\n\n\n",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "4ca5ca6c-ceb6-458c-8623-ab9419c878a1",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vNoOfRows",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "312",
+    "qIsScriptCreated": true
+  },
+  {
+    "qInfo": {
+      "qId": "4f1da355-3f7c-4031-a8ee-a89a77d18af1",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "v_Max_Year",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "= if(IsNull(GetFieldSelections([Year])),\r\n\nMax({1<Year=P(Year)>}Year)\n,\nMax({1<Year=P(Year)>}Year)\n\n)",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "5081ed34-1ea6-42da-aeb9-108cf9921b22",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "v_Passives",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "pick (\r\n\n$(v_Switch_Option_BU_SU)\n\n\n,COUNT(DISTINCT{$< Year ={$(v_Max_Year)} , [Question Type] = {'NPS'} , Score ={\">6<9\"}  , [Entity Type] = {'Business Unit'}>}     [__KEY_metadata]  &  '|' & Entity  )   \n\n,COUNT(DISTINCT{$< Year ={$(v_Max_Year)} , [Question Type] = {'NPS'} , Score ={\">6<9\"}  , [Entity Type] = {'Service Unit'}>}     [__KEY_metadata]  &  '|' & Entity  )   \n \n,COUNT(DISTINCT{$< Year ={$(v_Max_Year)} , [Question Type] = {'NPS'},  Score ={\">6<9\"}   >}     [__KEY_metadata]  &  '|' & Entity  )   \n\n)\n\n\n\n",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "525ca817-ae08-4685-8d5b-6d455b502b5e",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "v_Switch_Option_BU_SU_Filters",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "=Pick(\r\n$(v_Switch_Option_BU_SU)\n\n,'not ( WildMatch ( [Business Unit]  ,''*Indevco Service Unit*'') )'\n,'( WildMatch ( [Business Unit]  ,''*Indevco Service Unit*'') )'\n,'1'\n)\n",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "62e4616b-adbe-471f-be97-a4847f69e374",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "v_Max_Month_ID_LY",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "= if\n(IsNull(GetFieldSelections([Year])),\nif\n(IsNull(GetFieldSelections([Month])),\nMax({1<[Provider] = {'PLATTS A'},Year=P(Year),Quarter=P(Quarter),[Month Year]=P([Month Year]),[Month Num]=P([Month Num]),Month=P(Month)>}[Month ID])-12,\nMax({1<[Provider] = {'PLATTS A'},Year=P(Year),Quarter=P(Quarter),[Month Year]=P([Month Year]),[Month Num]=P([Month Num]),Month=P(Month)>}[Month ID])-12\n)\n,\nMax({1<Year=P(Year),Quarter=P(Quarter),[Month Year]=P([Month Year]),[Month Num]=P([Month Num]),Month=P(Month)>}[Month ID])-12\n\n)",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "641d7421-7c7e-4990-ba29-f42285167b51",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "v_Switch_Option_BU_SU",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "1",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "6901144b-692b-41d6-91ee-60848be08a28",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "v_CSAT_Score_OY",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "\r\n\npick (\n\n$(v_Switch_Option_BU_SU)\n\n\n,avg({$<  [Question Type] = {'CSAT'} , [Entity Type] = {'Business Unit'} >}    Score )\n,avg({$<   [Question Type] = {'CSAT'} , [Entity Type] = {'Service Unit'} >}    Score )\n,avg({$<   [Question Type] = {'CSAT'} >}    Score )\n\n\n)",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "7892b5a2-d881-44f3-81f8-d620f6905ab3",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "v_NPS_Drivers",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "\r\n\npick (\n\n$(v_Switch_Option_BU_SU)\n\n\n,avg((aggr ( avg({$< Year ={$(v_Max_Year)}   , [Question Type] = {'NPS'} , [Entity Type] = {'Business Unit'}  >}   Score) ,  [__KEY_metadata] )))\n,avg((aggr ( avg({$< Year ={$(v_Max_Year)}   , [Question Type] = {'NPS'} , [Entity Type] = {'Service Unit'}  >}   Score) ,  [__KEY_metadata] )))\n,avg((aggr ( avg({$< Year ={$(v_Max_Year)}   , [Question Type] = {'NPS'} >}   Score) ,  [__KEY_metadata] )))\n\n\n\n)\n\n\n",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "7b4e4d53-f525-4d73-9290-1b349d6f8f47",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "v_NPS_Score_P_LY",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "pick (\r\n\n$(v_Switch_Option_BU_SU)\n\n\n,(COUNT( distinct {$<   [Question Type] = {'NPS'},  Score ={\">8\"}   , Year ={$(v_Max_Year_LY)} ,[Entity Type] = {'Business Unit'}  >}     [__KEY_metadata]  &  '|' & Entity )   \n/\nCOUNT( distinct {$<   [Question Type] = {'NPS'}, Year ={$(v_Max_Year_LY)} , [Entity Type] = {'Business Unit'}  >}     [__KEY_metadata]   &  '|' & Entity )   \n\n-\n\n(COUNT( DISTINCT {$<   [Question Type] = {'NPS'}, Score ={\"<=6\"}, Year ={$(v_Max_Year_LY)} , [Entity Type] = {'Business Unit'}  >}     [__KEY_metadata]    &  '|' & Entity)   \n/\nCOUNT( distinct {$<    [Question Type] = {'NPS'},  Year ={$(v_Max_Year_LY)} , [Entity Type] = {'Business Unit'}  >}     [__KEY_metadata]   &  '|' & Entity )   ))\n\n\n,(COUNT( distinct {$<   [Question Type] = {'NPS'},  Score ={\">8\"}   , Year ={$(v_Max_Year_LY)} ,[Entity Type] = {'Service Unit'}  >}     [__KEY_metadata]   &  '|' & Entity )   \n/\nCOUNT( distinct {$<   [Question Type] = {'NPS'}, Year ={$(v_Max_Year_LY)} , [Entity Type] = {'Service Unit'}  >}     [__KEY_metadata]   &  '|' & Entity )   \n\n-\n\n(COUNT( DISTINCT {$<   [Question Type] = {'NPS'}, Score ={\"<=6\"}, Year ={$(v_Max_Year_LY)} , [Entity Type] = {'Service Unit'}  >}     [__KEY_metadata]   &  '|' & Entity )   \n/\nCOUNT( distinct {$<    [Question Type] = {'NPS'},  Year ={$(v_Max_Year_LY)} , [Entity Type] = {'Service Unit'}  >}     [__KEY_metadata]   &  '|' & Entity )   ))\n\n \n,(COUNT( distinct {$<   [Question Type] = {'NPS'},  Score ={\">8\"}   , Year ={$(v_Max_Year_LY)}   >}     [__KEY_metadata]   &  '|' & Entity )   \n/\nCOUNT( distinct {$<   [Question Type] = {'NPS'}, Year ={$(v_Max_Year_LY)} >}     [__KEY_metadata]  &  '|' & Entity )   \n\n-\n\n(COUNT( DISTINCT {$<   [Question Type] = {'NPS'}, Score ={\"<=6\"}, Year ={$(v_Max_Year_LY)}  >}     [__KEY_metadata]  &  '|' & Entity )   \n/\nCOUNT( distinct {$<    [Question Type] = {'NPS'},  Year ={$(v_Max_Year_LY)}  >}     [__KEY_metadata]   &  '|' & Entity)   ))\n\n\n)\n\n\n\n",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "7dd13ebc-116e-4942-9593-9593fb7c103c",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "v_Selected_Dimension_One_Dims",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "=(Pick(\r\n\n$(v_Switch_Option_BU_SU),\n\n\t'[Business Unit]'\n    ,'[Entity]'\n    , '[Business Unit]'\n    ))",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "82d9700d-cc35-47af-877a-50a7092e6d22",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "v_Switch_Option_BU_SU_Filter",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "=Pick(\r\n$(v_Switch_Option_BU_SU)\n\n,'[Business Unit] =- {''Indevco Service Unit''}'\n,'[Business Unit] = {''Indevco Service Unit''}'\n,'1'\n)\n",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "85542fab-2ab3-4fe9-8cd5-df79848ae541",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "v_Detractors",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "\r\npick (\n\n$(v_Switch_Option_BU_SU)\n\n\n,COUNT( DISTINCT {$<  [Question Type] = {'NPS'}, Score ={\"<=6\"}, Year ={$(v_Max_Year)}  , [Entity Type] = {'Business Unit'}  >}       [__KEY_metadata]  &  '|' & Entity  )   \n,COUNT( DISTINCT {$<  [Question Type] = {'NPS'}, Score ={\"<=6\"}, Year ={$(v_Max_Year)}  , [Entity Type] = {'Service Unit'}  >}       [__KEY_metadata]   &  '|' & Entity )   \n,COUNT( DISTINCT {$<  [Question Type] = {'NPS'}, Score ={\"<=6\"}, Year ={$(v_Max_Year)} >}       [__KEY_metadata]  &  '|' & Entity  )   \n\n\n)\n\n\n\n",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "85ef2fd2-6d92-42a1-999b-29cd7b8b904d",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "v_Filtered_Questions",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "(\r\nif(Index(simple_text,'?') > 0 ,\nIF(   WILDMATCH(simple_text, '*<strong>*'), TextBetween(  simple_text , '<strong>' ,'</strong>' ) ,\n\n\tif ( family ='open_ended' , 'No Sub Question' , \n     \n    \n    TextBetween(  simple_text , '' ,'|'))\n) ) )",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "8f69179a-c83f-41ba-a649-6218c412d77b",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "v_Detractors_P",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "pick (\r\n\n$(v_Switch_Option_BU_SU)\n\n\n,COUNT( distinct  {$<   [Question Type] = {'NPS'},  Score ={\"<=6\"} ,Year ={$(v_Max_Year)} , [Entity Type] = {'Business Unit'}   >}     [__KEY_metadata] & '|' & Entity )   \n/\nCOUNT(distinct{$<  [Question Type] = {'NPS'}, Year ={$(v_Max_Year)} , [Entity Type] = {'Business Unit'}  >}    [__KEY_metadata] & '|' & Entity )   \n\n\n,COUNT( distinct {$<   [Question Type] = {'NPS'},  Score ={\"<=6\"} ,Year ={$(v_Max_Year)} , [Entity Type] = {'Service Unit'}   >}     [__KEY_metadata]  & '|' & Entity)   \n/\nCOUNT(distinct{$<  [Question Type] = {'NPS'}, Year ={$(v_Max_Year)} , [Entity Type] = {'Service Unit'}  >}    [__KEY_metadata] & '|' & Entity )   \n\n \n,COUNT( distinct {$<   [Question Type] = {'NPS'},  Score ={\"<=6\"} ,Year ={$(v_Max_Year)}    >}     [__KEY_metadata]  & '|' & Entity)   \n/\nCOUNT(distinct{$<  [Question Type] = {'NPS'}, Year ={$(v_Max_Year)} >}    [__KEY_metadata] & '|' & Entity )   \n\n\n)\n\n\n\n",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "9126dda1-d19e-4fcc-8225-e770dfb0b3ee",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vMaxCalendarDate",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "43465"
+  },
+  {
+    "qInfo": {
+      "qId": "a2452cb4-4aa3-47d5-bcc4-c7bd792b000b",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "v_Responses_LY",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "\r\npick (\n\n$(v_Switch_Option_BU_SU)\n\n\n,max({$<  Year ={$(v_Max_Year_LY)} , [Entity Type] = {'Business Unit'} >}  total   ) \n,max({$<  Year ={$(v_Max_Year_LY)} , [Entity Type] = {'Service Unit'} >}  total   )\n,max({$<  Year ={$(v_Max_Year_LY)}  >}  total   )\n\n\n)\n\n\n",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "a55bc156-893b-4807-805b-bb11180de2c7",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "v_Promoters_P",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "\r\npick (\n\n$(v_Switch_Option_BU_SU)\n\n\n,COUNT( distinct  {$<   [Question Type] = {'NPS'}, Score ={\">8\"}  ,Year ={$(v_Max_Year)} , [Entity Type] = {'Business Unit'}   >}     [__KEY_metadata] &  '|' & Entity )   \n/\nCOUNT( distinct {$<  [Question Type] = {'NPS'}, Year ={$(v_Max_Year)} , [Entity Type] = {'Business Unit'}  >}    [__KEY_metadata]  &  '|' & Entity  )   \n\n\n,COUNT( distinct  {$<   [Question Type] = {'NPS'}, Score ={\">8\"}  ,Year ={$(v_Max_Year)} , [Entity Type] = {'Service Unit'}   >}     [__KEY_metadata]  &  '|' & Entity  )   \n/\nCOUNT( distinct {$<  [Question Type] = {'NPS'}, Year ={$(v_Max_Year)} , [Entity Type] = {'Service Unit'}  >}    [__KEY_metadata]  &  '|' & Entity  )   \n\n \n,COUNT( distinct   {$<   [Question Type] = {'NPS'}, Score ={\">8\"}  ,Year ={$(v_Max_Year)}    >}     [__KEY_metadata]  &  '|' & Entity  )   \n/\nCOUNT( distinct {$<  [Question Type] = {'NPS'}, Year ={$(v_Max_Year)} >}    [__KEY_metadata]  &  '|' & Entity  )   \n\n\n)\n\n\n\n",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "abb4d7c1-ad97-456a-b0d8-47e657111d04",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "v_Passives_BarChart_P",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "\r\n\n\npick (\n\n$(v_Switch_Option_BU_SU)\n\n\n, dual( 'Passives    ' &Num\n \n(COUNT( distinct  {$<   [Question Type] = {'NPS'}, Score ={\">6<9\"},Year ={$(v_Max_Year)} ,[Entity Type] = {'Business Unit'}   >}    [__KEY_metadata] & '|' & Entity)   \n/\nCOUNT( distinct {$<  [Question Type] = {'NPS'}, Year ={$(v_Max_Year)} ,[Entity Type] = {'Business Unit'}  >}     [__KEY_metadata] & '|' & Entity   )*100,'##.0')  , \n\n\nCOUNT(  distinct {$<  [Question Type] = {'NPS'},Score ={\">6<9\"},[Entity Type] = {'Business Unit'}  >}      [__KEY_metadata] & '|' & Entity ) \n/\nCOUNT( distinct {$<   [Question Type] = {'NPS'},Year ={$(v_Max_Year)} ,[Entity Type] = {'Business Unit'}  >}    [__KEY_metadata]  & '|' & Entity )*100\n)\n\n, dual( 'Passives    ' &Num\n \n(COUNT( distinct  {$<   [Question Type] = {'NPS'}, Score ={\">6<9\"} ,Year ={$(v_Max_Year)} ,[Entity Type] = {'Service Unit'}   >}    [__KEY_metadata]& '|' & Entity )   \n/\nCOUNT( distinct {$<  [Question Type] = {'NPS'}, Year ={$(v_Max_Year)} ,[Entity Type] = {'Service Unit'}  >}     [__KEY_metadata]& '|' & Entity    )*100,'##.0')  , \n\n\nCOUNT( distinct  {$<  [Question Type] = {'NPS'}, Score ={\">6<9\"} ,[Entity Type] = {'Service Unit'}  >}      [__KEY_metadata] & '|' & Entity ) \n/\nCOUNT( distinct {$<   [Question Type] = {'NPS'},Year ={$(v_Max_Year)} ,[Entity Type] = {'Service Unit'}  >}    [__KEY_metadata] & '|' & Entity  )*100\n)\n\n, dual( 'Passives    ' &Num\n \n(COUNT( distinct  {$<   [Question Type] = {'NPS'}, Score ={\">6<9\"} ,Year ={$(v_Max_Year)}   >}    [__KEY_metadata] & '|' & Entity)   \n/\nCOUNT( distinct {$<  [Question Type] = {'NPS'}, Year ={$(v_Max_Year)}  >}     [__KEY_metadata] & '|' & Entity   )*100,'##.0')  , \n\n\nCOUNT(  distinct  {$<  [Question Type] = {'NPS'},Score ={\">6<9\"} >}      [__KEY_metadata] & '|' & Entity ) \n/\nCOUNT( distinct {$<   [Question Type] = {'NPS'},Year ={$(v_Max_Year)}   >}    [__KEY_metadata] & '|' & Entity  )*100\n)\n\n\n\n)\n\n\n\n",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "ae7008fb-f0a3-437b-9ea5-30c5c0cfbb47",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vMinCalendarDate",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "42005"
+  },
+  {
+    "qInfo": {
+      "qId": "b81bc452-f9e3-4c52-b3b1-59f2956a87a4",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "v_Matrix_Score",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "(avg ( if ( WildMatch ( heading  ,'*recommend*') and  family ='matrix' and right (simple_text ,3)  ='N/A', 0 ,  \r\nif (WildMatch ( heading  ,'*recommend*')  and family ='matrix' , num( right (simple_text ,2) ))) ))",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "b84e7294-ae9f-4bde-8d16-8db76258eb64",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "v_Detractors_BarChart_P",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "pick (\r\n\n$(v_Switch_Option_BU_SU)\n\n\n, dual( 'Detractors    ' &Num\n \n(COUNT( distinct {$<   [Question Type] = {'NPS'},  Score ={\"<=6\"} ,Year ={$(v_Max_Year)} ,[Entity Type] = {'Business Unit'}   >}    [__KEY_metadata] & '|' & Entity )   \n/\nCOUNT( distinct {$<  [Question Type] = {'NPS'}, Year ={$(v_Max_Year)} ,[Entity Type] = {'Business Unit'}  >}     [__KEY_metadata] & '|' & Entity   )*100,'##.0')  , \n\n\nCOUNT(  distinct {$<  [Question Type] = {'NPS'}, Score ={\"<=6\"} ,[Entity Type] = {'Business Unit'}  >}      [__KEY_metadata] & '|' & Entity ) \n/\nCOUNT( distinct {$<   [Question Type] = {'NPS'},Year ={$(v_Max_Year)} ,[Entity Type] = {'Business Unit'}  >}    [__KEY_metadata]  & '|' & Entity )*100\n)\n\n, dual( 'Detractors    ' &Num\n \n(COUNT( distinct  {$<   [Question Type] = {'NPS'},  Score ={\"<=6\"} ,Year ={$(v_Max_Year)} ,[Entity Type] = {'Service Unit'}   >}    [__KEY_metadata]& '|' & Entity )   \n/\nCOUNT( distinct {$<  [Question Type] = {'NPS'}, Year ={$(v_Max_Year)} ,[Entity Type] = {'Service Unit'}  >}     [__KEY_metadata] & '|' & Entity   )*100,'##.0')  , \n\n\nCOUNT( distinct  {$<  [Question Type] = {'NPS'}, Score ={\"<=6\"} ,[Entity Type] = {'Service Unit'}  >}      [__KEY_metadata]& '|' & Entity  ) \n/\nCOUNT( distinct {$<   [Question Type] = {'NPS'},Year ={$(v_Max_Year)} ,[Entity Type] = {'Service Unit'}  >}    [__KEY_metadata]& '|' & Entity   )*100\n)\n\n, dual( 'Detractors    ' &Num\n \n(COUNT( distinct {$<   [Question Type] = {'NPS'},  Score ={\"<=6\"} ,Year ={$(v_Max_Year)}   >}    [__KEY_metadata]& '|' & Entity )   \n/\nCOUNT( distinct {$<  [Question Type] = {'NPS'}, Year ={$(v_Max_Year)}  >}     [__KEY_metadata]& '|' & Entity    )*100,'##.0')  , \n\n\nCOUNT( distinct  {$<  [Question Type] = {'NPS'}, Score ={\"<=6\"}  >}      [__KEY_metadata] & '|' & Entity ) \n/\nCOUNT( distinct {$<   [Question Type] = {'NPS'},Year ={$(v_Max_Year)}   >}    [__KEY_metadata]& '|' & Entity   )*100\n)\n\n\n\n)\n\n\n\n",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "bdf76143-297f-4964-be0c-7f7c4170fd54",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "v_NPS_Score_P",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "pick (\r\n\n$(v_Switch_Option_BU_SU)\n\n\n,(COUNT( distinct {$<   [Question Type] = {'NPS'},  Score ={\">8\"}   , Year ={$(v_Max_Year)} ,[Entity Type] = {'Business Unit'}  >}     [__KEY_metadata]& '|' & Entity )   \n/\nCOUNT( distinct {$<   [Question Type] = {'NPS'}, Year ={$(v_Max_Year)} , [Entity Type] = {'Business Unit'}  >}     [__KEY_metadata] & '|' & Entity)   \n\n-\n\n(COUNT( DISTINCT {$<   [Question Type] = {'NPS'}, Score ={\"<=6\"}, Year ={$(v_Max_Year)} , [Entity Type] = {'Business Unit'}  >}     [__KEY_metadata] & '|' & Entity)   \n/\nCOUNT( distinct {$<    [Question Type] = {'NPS'},  Year ={$(v_Max_Year)} , [Entity Type] = {'Business Unit'}  >}     [__KEY_metadata]& '|' & Entity )   ))\n\n\n,(COUNT( distinct {$<   [Question Type] = {'NPS'},  Score ={\">8\"}   , Year ={$(v_Max_Year)} ,[Entity Type] = {'Service Unit'}  >}     [__KEY_metadata]& '|' & Entity )   \n/\nCOUNT( distinct {$<   [Question Type] = {'NPS'}, Year ={$(v_Max_Year)} , [Entity Type] = {'Service Unit'}  >}     [__KEY_metadata]& '|' & Entity )   \n\n-\n\n(COUNT( DISTINCT {$<   [Question Type] = {'NPS'}, Score ={\"<=6\"}, Year ={$(v_Max_Year)} , [Entity Type] = {'Service Unit'}  >}     [__KEY_metadata]& '|' & Entity )   \n/\nCOUNT( distinct {$<    [Question Type] = {'NPS'},  Year ={$(v_Max_Year)} , [Entity Type] = {'Service Unit'}  >}     [__KEY_metadata]& '|' & Entity )   ))\n\n \n,(COUNT( distinct {$<   [Question Type] = {'NPS'},  Score ={\">8\"}   , Year ={$(v_Max_Year)}   >}     [__KEY_metadata]& '|' & Entity )   \n/\nCOUNT( distinct {$<   [Question Type] = {'NPS'}, Year ={$(v_Max_Year)} >}     [__KEY_metadata]& '|' & Entity )   \n\n-\n\n(COUNT( DISTINCT {$<   [Question Type] = {'NPS'}, Score ={\"<=6\"}, Year ={$(v_Max_Year)}  >}     [__KEY_metadata]& '|' & Entity )   \n/\nCOUNT( distinct {$<    [Question Type] = {'NPS'},  Year ={$(v_Max_Year)}  >}     [__KEY_metadata]& '|' & Entity )   ))\n\n\n)\n\n\n\n",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "bf1c92e3-1a82-4a5e-ac99-2ca6959f6ea3",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "PAGE",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "1"
+  },
+  {
+    "qInfo": {
+      "qId": "c1013d67-081a-4ddf-b01a-e9bb2f42c69e",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "v_NPS_Score_OY",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "pick (\r\n\n$(v_Switch_Option_BU_SU)\n\n\n,(COUNT( distinct {$<   [Question Type] = {'NPS'},  Score ={\">8\"} ,[Entity Type] = {'Business Unit'}  >}     [__KEY_metadata] & '|' & Entity  )   \n/\nCOUNT( distinct {$<   [Question Type] = {'NPS'}, [Entity Type] = {'Business Unit'}  >}     [__KEY_metadata]& '|' & Entity  )   \n\n-\n\n(COUNT( DISTINCT {$<   [Question Type] = {'NPS'}, Score ={\"<=6\"}, [Entity Type] = {'Business Unit'}  >}     [__KEY_metadata] & '|' & Entity )   \n/\nCOUNT( distinct {$<    [Question Type] = {'NPS'}, [Entity Type] = {'Business Unit'}  >}     [__KEY_metadata]& '|' & Entity  )   ))\n\n\n,(COUNT( distinct {$<   [Question Type] = {'NPS'},  Score ={\">8\"}   ,[Entity Type] = {'Service Unit'}  >}     [__KEY_metadata]& '|' & Entity  )   \n/\nCOUNT( distinct {$<   [Question Type] = {'NPS'}, [Entity Type] = {'Service Unit'}  >}     [__KEY_metadata]& '|' & Entity  )   \n\n-\n\n(COUNT( DISTINCT {$<   [Question Type] = {'NPS'}, Score ={\"<=6\"} , [Entity Type] = {'Service Unit'}  >}     [__KEY_metadata]& '|' & Entity  )   \n/\nCOUNT( distinct {$<    [Question Type] = {'NPS'},  [Entity Type] = {'Service Unit'}  >}     [__KEY_metadata]& '|' & Entity  )   ))\n\n \n,(COUNT( distinct {$<   [Question Type] = {'NPS'},  Score ={\">8\"}     >}     [__KEY_metadata]& '|' & Entity  )   \n/\nCOUNT( distinct {$<   [Question Type] = {'NPS'} >}     [__KEY_metadata]& '|' & Entity  )   \n\n-\n\n(COUNT( DISTINCT {$<   [Question Type] = {'NPS'}, Score ={\"<=6\"} >}     [__KEY_metadata]& '|' & Entity  )   \n/\nCOUNT( distinct {$<    [Question Type] = {'NPS'}>}     [__KEY_metadata]& '|' & Entity  )   ))\n\n\n)\n\n\n\n",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "c8c39018-b90a-4ec8-bb23-93ca4505ecb5",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "v_Passives_P",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "\r\npick (\n\n$(v_Switch_Option_BU_SU)\n\n\n,COUNT( distinct  {$<   [Question Type] = {'NPS'}, Score ={\">6<9\"} ,Year ={$(v_Max_Year)} , [Entity Type] = {'Business Unit'}   >}     [__KEY_metadata] & '|' & Entity )   \n/\nCOUNT( distinct{$<  [Question Type] = {'NPS'}, Year ={$(v_Max_Year)} , [Entity Type] = {'Business Unit'}  >}    [__KEY_metadata] & '|' & Entity )   \n\n\n,COUNT(  distinct {$<   [Question Type] = {'NPS'}, Score ={\">6<9\"} ,Year ={$(v_Max_Year)} , [Entity Type] = {'Service Unit'}   >}     [__KEY_metadata] & '|' & Entity )   \n/\nCOUNT( distinct{$<  [Question Type] = {'NPS'}, Year ={$(v_Max_Year)} , [Entity Type] = {'Service Unit'}  >}    [__KEY_metadata] & '|' & Entity )   \n\n \n,COUNT(  distinct {$<   [Question Type] = {'NPS'}, Score ={\">6<9\"} ,Year ={$(v_Max_Year)}    >}     [__KEY_metadata] & '|' & Entity )   \n/\nCOUNT( distinct{$<  [Question Type] = {'NPS'}, Year ={$(v_Max_Year)} >}    [__KEY_metadata] & '|' & Entity )   \n\n\n)\n\n\n\n",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "dc95b3d4-7ff1-4930-b5b8-467cfe7fdb49",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "v_Promoters_BarChart_P",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "pick (\r\n\n$(v_Switch_Option_BU_SU)\n\n\n, dual( 'Promoters    ' &Num\n \n(COUNT(  distinct {$<   [Question Type] = {'NPS'}, Score ={\">8\"},Year ={$(v_Max_Year)} ,[Entity Type] = {'Business Unit'}   >}    [__KEY_metadata] & '|' & Entity)   \n/\nCOUNT( distinct{$<  [Question Type] = {'NPS'}, Year ={$(v_Max_Year)} ,[Entity Type] = {'Business Unit'}  >}     [__KEY_metadata] & '|' & Entity   )*100,'##.0')  , \n\n\nCOUNT(   distinct{$<  [Question Type] = {'NPS'},Score ={\">8\"},[Entity Type] = {'Business Unit'}  >}      [__KEY_metadata]& '|' & Entity  ) \n/\nCOUNT( distinct{$<   [Question Type] = {'NPS'},Year ={$(v_Max_Year)} ,[Entity Type] = {'Business Unit'}  >}    [__KEY_metadata] & '|' & Entity  )*100\n)\n\n, dual( 'Promoters    ' &Num\n \n(COUNT(  distinct {$<   [Question Type] = {'NPS'},Score ={\">8\"} ,Year ={$(v_Max_Year)} ,[Entity Type] = {'Service Unit'}   >}    [__KEY_metadata]& '|' & Entity )   \n/\nCOUNT( distinct{$<  [Question Type] = {'NPS'}, Year ={$(v_Max_Year)} ,[Entity Type] = {'Service Unit'}  >}     [__KEY_metadata]  & '|' & Entity  )*100,'##.0')  , \n\n\nCOUNT(  distinct {$<  [Question Type] = {'NPS'}, Score ={\">8\"},[Entity Type] = {'Service Unit'}  >}      [__KEY_metadata] & '|' & Entity ) \n/\nCOUNT( distinct{$<   [Question Type] = {'NPS'},Year ={$(v_Max_Year)} ,[Entity Type] = {'Service Unit'}  >}    [__KEY_metadata]& '|' & Entity   )*100\n)\n\n, dual( 'Promoters    ' &Num\n \n(COUNT(  distinct {$<   [Question Type] = {'NPS'}, Score ={\">8\"} ,Year ={$(v_Max_Year)}   >}    [__KEY_metadata] & '|' & Entity)   \n/\nCOUNT( distinct{$<  [Question Type] = {'NPS'}, Year ={$(v_Max_Year)}  >}     [__KEY_metadata]  & '|' & Entity  )*100,'##.0')  , \n\n\nCOUNT(  distinct {$<  [Question Type] = {'NPS'},Score ={\">8\"} >}      [__KEY_metadata]& '|' & Entity  ) \n/\nCOUNT( distinct{$<   [Question Type] = {'NPS'},Year ={$(v_Max_Year)}   >}    [__KEY_metadata] & '|' & Entity  )*100\n)\n\n\n\n)\n\n\n\n",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "dd9644fa-a9ee-404e-b996-209b55d40ec8",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "v_CSAT_Score_LY",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "pick (\r\n\n$(v_Switch_Option_BU_SU)\n\n\n,avg({$<  Year ={$(v_Max_Year_LY)}   , [Question Type] = {'CSAT'} , [Entity Type] = {'Business Unit'} >}    Score )\n,avg({$<  Year ={$(v_Max_Year_LY)}   , [Question Type] = {'CSAT'} , [Entity Type] = {'Service Unit'} >}    Score )\n,avg({$<  Year ={$(v_Max_Year_LY)}   , [Question Type] = {'CSAT'} >}    Score )\n\n\n)",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "f0d8f246-dda0-4b85-aca3-231e239f824c",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "v_Avg_Score",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "(aggr ( avg({$<  family = {'matrix'} ,heading =  {\"=(wildmatch(heading,'*recommend*') =1)\"}    >}   Score) ,  [__KEY_metadata] ))",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "f6b7320f-b0b1-49bc-92b6-27ec11b86829",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "v_Total_Respondents",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "\r\n\npick (\n\n$(v_Switch_Option_BU_SU)\n\n\n,COUNT( distinct {$< Year ={$(v_Max_Year)} , [Question Type] = {'NPS'} , [Entity Type] = {'Business Unit'}>}     [__KEY_metadata]  &  '|' & Entity  )   \n\n,COUNT( distinct {$< Year ={$(v_Max_Year)} , [Question Type] = {'NPS'} , [Entity Type] = {'Service Unit'}>}     [__KEY_metadata]   &  '|' & Entity  )   \n \n,COUNT( distinct {$< Year ={$(v_Max_Year)} , [Question Type] = {'NPS'} >}     [__KEY_metadata]   &  '|' & Entity  )   \n\n)\n\n\n\n",
+    "tags": []
+  }
+]

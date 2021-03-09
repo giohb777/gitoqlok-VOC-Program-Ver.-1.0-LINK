@@ -1,0 +1,49 @@
+[
+  {
+    "qProperty": {
+      "qInfo": {
+        "qId": "a4db975f-955c-4f08-9ee9-c73d6b0ced10",
+        "qType": "story"
+      },
+      "qMetaDef": {
+        "title": "My new story",
+        "description": ""
+      },
+      "thumbnail": {
+        "qStaticContentUrlDef": {}
+      },
+      "qChildListDef": {
+        "qData": {
+          "title": "/title",
+          "rank": "/rank"
+        }
+      }
+    },
+    "qChildren": [
+      {
+        "qProperty": {
+          "qInfo": {
+            "qId": "vjRQAA",
+            "qType": "slide"
+          },
+          "qMetaDef": {},
+          "rank": -1,
+          "qChildListDef": {
+            "qData": {
+              "title": "/title",
+              "sheetId": "/sheetId",
+              "ratio": "/ratio",
+              "position": "/position",
+              "dataPath": "/dataPath",
+              "srcPath": "/srcPath",
+              "visualization": "/visualization",
+              "visualizationType": "/visualizationType",
+              "style": "/style"
+            }
+          }
+        },
+        "qChildren": []
+      }
+    ]
+  }
+]

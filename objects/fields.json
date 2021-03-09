@@ -1,0 +1,1794 @@
+[
+  {
+    "qIsHidden": true,
+    "qIsSystem": true,
+    "qName": "$Field",
+    "qCardinal": 153,
+    "qTags": [
+      "$hidden",
+      "$system",
+      "$key",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qIsHidden": true,
+    "qIsSystem": true,
+    "qName": "$FieldNo",
+    "qCardinal": 26,
+    "qTags": [
+      "$hidden",
+      "$system",
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qIsHidden": true,
+    "qIsSystem": true,
+    "qName": "$Fields",
+    "qCardinal": 12,
+    "qTags": [
+      "$hidden",
+      "$system",
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qIsHidden": true,
+    "qIsSystem": true,
+    "qName": "$Info",
+    "qCardinal": 1,
+    "qTags": [
+      "$hidden",
+      "$system",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qIsHidden": true,
+    "qIsSystem": true,
+    "qName": "$Rows",
+    "qCardinal": 19,
+    "qTags": [
+      "$hidden",
+      "$system",
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qIsHidden": true,
+    "qIsSystem": true,
+    "qName": "$Table",
+    "qCardinal": 29,
+    "qTags": [
+      "$hidden",
+      "$system",
+      "$key",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qName": "%SynHeadersA",
+    "qCardinal": 9,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "%SynHeadersA"
+    ]
+  },
+  {
+    "qName": "@Value",
+    "qCardinal": 2,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$key"
+    ],
+    "qSrcTables": [
+      "page_path"
+    ]
+  },
+  {
+    "qName": "Answer Category",
+    "qCardinal": 3,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "answers"
+    ]
+  },
+  {
+    "qName": "Answer Category Visibility",
+    "qCardinal": 4,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "answers"
+    ]
+  },
+  {
+    "qName": "Answer Options",
+    "qCardinal": 17,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "answers"
+    ]
+  },
+  {
+    "qName": "Answer Options Ordering",
+    "qCardinal": 16,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "answers"
+    ]
+  },
+  {
+    "qName": "Answer Type",
+    "qCardinal": 7,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "answers"
+    ]
+  },
+  {
+    "qName": "BU_KEY",
+    "qCardinal": 1,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "email"
+    ]
+  },
+  {
+    "qName": "Business Unit",
+    "qCardinal": 2,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "data_IDS"
+    ]
+  },
+  {
+    "qName": "Company Name_Mapped",
+    "qCardinal": 2,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "ContactsMerging"
+    ]
+  },
+  {
+    "qName": "Company Name_Mapped_NotAnswered",
+    "qCardinal": 3880,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "ManualReachMapping"
+    ]
+  },
+  {
+    "qName": "Conact Company Name - Consolidated",
+    "qCardinal": 43,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Contacts_Anonymous_Final"
+    ]
+  },
+  {
+    "qName": "Conact Country - Consolidated",
+    "qCardinal": 10,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Contacts_Anonymous_Final"
+    ]
+  },
+  {
+    "qName": "Conact Email - Consolidated",
+    "qCardinal": 38,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Contacts_Anonymous_Final"
+    ]
+  },
+  {
+    "qName": "Conact First Name - Consolidated",
+    "qCardinal": 3,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Contacts_Anonymous_Final"
+    ]
+  },
+  {
+    "qName": "Conact Full Name - Consolidated",
+    "qCardinal": 3,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Contacts_Anonymous_Final"
+    ]
+  },
+  {
+    "qName": "Conact Last Name - Consolidated",
+    "qCardinal": 3,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Contacts_Anonymous_Final"
+    ]
+  },
+  {
+    "qName": "Contact Division",
+    "qCardinal": 2,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Contacts_Anonymous_Final"
+    ]
+  },
+  {
+    "qName": "Contact Email",
+    "qCardinal": 35,
+    "qTags": [],
+    "qSrcTables": [
+      "Email_BU_TABLE"
+    ]
+  },
+  {
+    "qName": "Contact Master Key",
+    "qCardinal": 35,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "ContactsMerging"
+    ]
+  },
+  {
+    "qName": "Customer Account",
+    "qCardinal": 37,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Customers"
+    ]
+  },
+  {
+    "qName": "Customer Affiliation Type",
+    "qCardinal": 2,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Customers"
+    ]
+  },
+  {
+    "qName": "Customer Area",
+    "qCardinal": 6,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Customers"
+    ]
+  },
+  {
+    "qName": "Customer Business Unit",
+    "qCardinal": 1,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Item_Segments"
+    ]
+  },
+  {
+    "qName": "Customer Chain",
+    "qCardinal": 37,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Customers"
+    ]
+  },
+  {
+    "qName": "Customer Class",
+    "qCardinal": 7,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Customers"
+    ]
+  },
+  {
+    "qName": "Customer Country",
+    "qCardinal": 9,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Customers"
+    ]
+  },
+  {
+    "qName": "Customer Group",
+    "qCardinal": 2,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Customers"
+    ]
+  },
+  {
+    "qName": "Customer Insurance Account Number",
+    "qCardinal": 30,
+    "qTags": [],
+    "qSrcTables": [
+      "Customers"
+    ]
+  },
+  {
+    "qName": "Customer Insurance Coverage",
+    "qCardinal": 11,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Customers"
+    ]
+  },
+  {
+    "qName": "Customer Insurance Payment Term",
+    "qCardinal": 8,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Customers"
+    ]
+  },
+  {
+    "qName": "Customer Insurance Premium",
+    "qCardinal": 6,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Customers"
+    ]
+  },
+  {
+    "qName": "Customer Insurance Provider",
+    "qCardinal": 7,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Customers"
+    ]
+  },
+  {
+    "qName": "Customer Invoice Account",
+    "qCardinal": 4,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Customers"
+    ]
+  },
+  {
+    "qName": "Customer Key",
+    "qCardinal": 38,
+    "qTags": [
+      "$key",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Customers",
+      "Email_BU_TABLE",
+      "Item_Segments"
+    ]
+  },
+  {
+    "qName": "Customer Key Account",
+    "qCardinal": 2,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Customers"
+    ]
+  },
+  {
+    "qName": "Customer Key Account LV2",
+    "qCardinal": 2,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Customers"
+    ]
+  },
+  {
+    "qName": "Customer Main Contact",
+    "qCardinal": 7,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Customers"
+    ]
+  },
+  {
+    "qName": "Customer Payment Term",
+    "qCardinal": 8,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Customers"
+    ]
+  },
+  {
+    "qName": "Customer Sector - Profile",
+    "qCardinal": 3,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Customers"
+    ]
+  },
+  {
+    "qName": "Customer Selling Type",
+    "qCardinal": 1,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Customers"
+    ]
+  },
+  {
+    "qName": "Customer State",
+    "qCardinal": 12,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Customers"
+    ]
+  },
+  {
+    "qName": "Customer Statistics Group",
+    "qCardinal": 4,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Customers"
+    ]
+  },
+  {
+    "qName": "Customer Sub Sector - Profile",
+    "qCardinal": 2,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Customers"
+    ]
+  },
+  {
+    "qName": "Customer Unit",
+    "qCardinal": 4,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Customers"
+    ]
+  },
+  {
+    "qName": "DETRACTORS NPS BENCHMARK",
+    "qCardinal": 1,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "data_IDS"
+    ]
+  },
+  {
+    "qName": "Division",
+    "qCardinal": 2,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "data_IDS"
+    ]
+  },
+  {
+    "qName": "Email",
+    "qCardinal": 4932,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "ManualReachMapping"
+    ]
+  },
+  {
+    "qName": "Email_BU Key",
+    "qCardinal": 35,
+    "qTags": [
+      "$key",
+      "$text"
+    ],
+    "qSrcTables": [
+      "email",
+      "Email_BU_TABLE"
+    ]
+  },
+  {
+    "qName": "Email_BU Key2",
+    "qCardinal": 35,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Email_BU_TABLE"
+    ]
+  },
+  {
+    "qName": "Entity",
+    "qCardinal": 7,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "DIM_Entity"
+    ]
+  },
+  {
+    "qName": "Entity Type",
+    "qCardinal": 2,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "DIM_Entity"
+    ]
+  },
+  {
+    "qName": "EntityNEW",
+    "qCardinal": 59,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "ManualReachMapping"
+    ]
+  },
+  {
+    "qName": "Expected CSAT",
+    "qCardinal": 7,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "ManualReachMapping"
+    ]
+  },
+  {
+    "qName": "First Name_Mapped",
+    "qCardinal": 3,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "ContactsMerging"
+    ]
+  },
+  {
+    "qName": "First Name_Mapped_NotAnswered",
+    "qCardinal": 1736,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "ManualReachMapping"
+    ]
+  },
+  {
+    "qName": "GLOBAL NPS BENCHMARK",
+    "qCardinal": 1,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "data_IDS"
+    ]
+  },
+  {
+    "qName": "Invoice Amount USD",
+    "qCardinal": 425,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Item_Segments"
+    ]
+  },
+  {
+    "qName": "Invoice Cost USD",
+    "qCardinal": 544,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Item_Segments"
+    ]
+  },
+  {
+    "qName": "Invoice Kg",
+    "qCardinal": 412,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Item_Segments"
+    ]
+  },
+  {
+    "qName": "Invoice Year",
+    "qCardinal": 8,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Item_Segments"
+    ]
+  },
+  {
+    "qName": "IsServiceUnit",
+    "qCardinal": 8,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "questions"
+    ]
+  },
+  {
+    "qName": "KeyQuestionsToEnity",
+    "qCardinal": 823,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "questions"
+    ]
+  },
+  {
+    "qName": "Last Name_Mapped",
+    "qCardinal": 3,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "ContactsMerging"
+    ]
+  },
+  {
+    "qName": "Last Name_Mapped_NotAnswered",
+    "qCardinal": 1874,
+    "qTags": [],
+    "qSrcTables": [
+      "ManualReachMapping"
+    ]
+  },
+  {
+    "qName": "Mixed Security Key",
+    "qCardinal": 7,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "DIM_Entity"
+    ]
+  },
+  {
+    "qName": "PASSIVES NPS BENCHMARK",
+    "qCardinal": 1,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "data_IDS"
+    ]
+  },
+  {
+    "qName": "PROMOTERS NPS BENCHMARK",
+    "qCardinal": 1,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "data_IDS"
+    ]
+  },
+  {
+    "qName": "Parent Company",
+    "qCardinal": 37,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Customers"
+    ]
+  },
+  {
+    "qName": "Parent Entity",
+    "qCardinal": 2,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "DIM_Entity"
+    ]
+  },
+  {
+    "qName": "Question Family",
+    "qCardinal": 3,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "answers"
+    ]
+  },
+  {
+    "qName": "Question Header",
+    "qCardinal": 7,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "answers"
+    ]
+  },
+  {
+    "qName": "Question Heading",
+    "qCardinal": 14,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "answers"
+    ]
+  },
+  {
+    "qName": "Question Heading Other Text",
+    "qCardinal": 1,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "answers"
+    ]
+  },
+  {
+    "qName": "Question Type",
+    "qCardinal": 4,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "questions"
+    ]
+  },
+  {
+    "qName": "Reach",
+    "qCardinal": 1,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ManualReachMapping"
+    ]
+  },
+  {
+    "qName": "Reach Answered",
+    "qCardinal": 2,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "ManualReachMapping"
+    ]
+  },
+  {
+    "qName": "Salesman",
+    "qCardinal": 15,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Salesmen"
+    ]
+  },
+  {
+    "qName": "Salesman Key",
+    "qCardinal": 16,
+    "qTags": [
+      "$key",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Customers",
+      "Salesmen"
+    ]
+  },
+  {
+    "qName": "Salesman Level1",
+    "qCardinal": 3,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Salesmen"
+    ]
+  },
+  {
+    "qName": "Salesman Level2",
+    "qCardinal": 5,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Salesmen"
+    ]
+  },
+  {
+    "qName": "Salesman Level3",
+    "qCardinal": 10,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Salesmen"
+    ]
+  },
+  {
+    "qName": "Salesman Level4",
+    "qCardinal": 15,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Salesmen"
+    ]
+  },
+  {
+    "qName": "Score",
+    "qCardinal": 61,
+    "qTags": [],
+    "qSrcTables": [
+      "answers"
+    ]
+  },
+  {
+    "qName": "Segment 1",
+    "qCardinal": 5,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Item_Segments"
+    ]
+  },
+  {
+    "qName": "Segment 2",
+    "qCardinal": 6,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Item_Segments"
+    ]
+  },
+  {
+    "qName": "Segment 3",
+    "qCardinal": 9,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Item_Segments"
+    ]
+  },
+  {
+    "qName": "Segment 4",
+    "qCardinal": 14,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Item_Segments"
+    ]
+  },
+  {
+    "qName": "Segment 5",
+    "qCardinal": 9,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Item_Segments"
+    ]
+  },
+  {
+    "qName": "Segment 6",
+    "qCardinal": 16,
+    "qTags": [],
+    "qSrcTables": [
+      "Item_Segments"
+    ]
+  },
+  {
+    "qName": "Segment 7",
+    "qCardinal": 8,
+    "qTags": [],
+    "qSrcTables": [
+      "Item_Segments"
+    ]
+  },
+  {
+    "qName": "Segment 8",
+    "qCardinal": 12,
+    "qTags": [],
+    "qSrcTables": [
+      "Item_Segments"
+    ]
+  },
+  {
+    "qName": "Service Unit",
+    "qCardinal": 1,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "data_IDS"
+    ]
+  },
+  {
+    "qName": "Survery Title",
+    "qCardinal": 2,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "data_IDS"
+    ]
+  },
+  {
+    "qName": "Survery Type",
+    "qCardinal": 1,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "data_IDS"
+    ]
+  },
+  {
+    "qName": "Survey Entity",
+    "qCardinal": 2,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "data_IDS"
+    ]
+  },
+  {
+    "qName": "Survey Entity Type",
+    "qCardinal": 2,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "data_IDS"
+    ]
+  },
+  {
+    "qName": "Survey Title Original",
+    "qCardinal": 2,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "data_IDS"
+    ]
+  },
+  {
+    "qName": "SurveyName",
+    "qCardinal": 57,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "ManualReachMapping"
+    ]
+  },
+  {
+    "qName": "Word",
+    "qCardinal": 365,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "DataFinal"
+    ]
+  },
+  {
+    "qName": "Year",
+    "qCardinal": 1,
+    "qTags": [],
+    "qSrcTables": [
+      "data_IDS"
+    ]
+  },
+  {
+    "qName": "__KEY_contact",
+    "qCardinal": 50,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$key",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "custom_value4",
+      "custom_value2",
+      "custom_value",
+      "custom_value5",
+      "custom_value6",
+      "contact",
+      "Fisrt_name_New",
+      "Last_name_New",
+      "CompanyMappingNew",
+      "Contacts_Anonymous_Final",
+      "email"
+    ]
+  },
+  {
+    "qName": "__KEY_data",
+    "qCardinal": 50,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$key",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "custom_variables",
+      "pages",
+      "page_path",
+      "metadata",
+      "data"
+    ]
+  },
+  {
+    "qName": "__KEY_metadata",
+    "qCardinal": 50,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$key",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "contact",
+      "metadata"
+    ]
+  },
+  {
+    "qName": "__KEY_pages",
+    "qCardinal": 50,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$key",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "pages",
+      "questions"
+    ]
+  },
+  {
+    "qName": "__KEY_questions",
+    "qCardinal": 823,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$key",
+      "$text"
+    ],
+    "qSrcTables": [
+      "questions",
+      "DataFinal",
+      "DIM_Entity",
+      "answers"
+    ]
+  },
+  {
+    "qName": "__KEY_root",
+    "qCardinal": 2,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$key",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "data",
+      "root"
+    ]
+  },
+  {
+    "qName": "analyze_url",
+    "qCardinal": 50,
+    "qTags": [
+      "$key",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "data"
+    ]
+  },
+  {
+    "qName": "choice_id",
+    "qCardinal": 101,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$key"
+    ],
+    "qSrcTables": [
+      "answers"
+    ]
+  },
+  {
+    "qName": "collection_mode",
+    "qCardinal": 1,
+    "qTags": [
+      "$key",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "data"
+    ]
+  },
+  {
+    "qName": "collector_id",
+    "qCardinal": 2,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$key"
+    ],
+    "qSrcTables": [
+      "data"
+    ]
+  },
+  {
+    "qName": "custom_value",
+    "qCardinal": 36,
+    "qTags": [
+      "$key",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "data"
+    ]
+  },
+  {
+    "qName": "date_created",
+    "qCardinal": 50,
+    "qTags": [
+      "$numeric",
+      "$key",
+      "$timestamp"
+    ],
+    "qSrcTables": [
+      "data"
+    ]
+  },
+  {
+    "qName": "date_modified",
+    "qCardinal": 50,
+    "qTags": [
+      "$numeric",
+      "$key",
+      "$timestamp"
+    ],
+    "qSrcTables": [
+      "data"
+    ]
+  },
+  {
+    "qName": "edit_url",
+    "qCardinal": 50,
+    "qTags": [
+      "$key",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "data"
+    ]
+  },
+  {
+    "qName": "family",
+    "qCardinal": 3,
+    "qTags": [
+      "$key",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "questions"
+    ]
+  },
+  {
+    "qName": "heading",
+    "qCardinal": 14,
+    "qTags": [
+      "$key",
+      "$text"
+    ],
+    "qSrcTables": [
+      "questions"
+    ]
+  },
+  {
+    "qName": "href",
+    "qCardinal": 50,
+    "qTags": [
+      "$key",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "data"
+    ]
+  },
+  {
+    "qName": "id",
+    "qCardinal": 7,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$key"
+    ],
+    "qSrcTables": [
+      "questions"
+    ]
+  },
+  {
+    "qName": "id_u0",
+    "qCardinal": 2,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$key"
+    ],
+    "qSrcTables": [
+      "pages"
+    ]
+  },
+  {
+    "qName": "id_u1",
+    "qCardinal": 50,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$key"
+    ],
+    "qSrcTables": [
+      "data"
+    ]
+  },
+  {
+    "qName": "ip_address",
+    "qCardinal": 42,
+    "qTags": [
+      "$key",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "data"
+    ]
+  },
+  {
+    "qName": "per_page",
+    "qCardinal": 1,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$key"
+    ],
+    "qSrcTables": [
+      "root"
+    ]
+  },
+  {
+    "qName": "recipient_id",
+    "qCardinal": 50,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$key"
+    ],
+    "qSrcTables": [
+      "data"
+    ]
+  },
+  {
+    "qName": "response_status",
+    "qCardinal": 1,
+    "qTags": [
+      "$key",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "data"
+    ]
+  },
+  {
+    "qName": "row_id",
+    "qCardinal": 33,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$key"
+    ],
+    "qSrcTables": [
+      "answers"
+    ]
+  },
+  {
+    "qName": "simple_text",
+    "qCardinal": 275,
+    "qTags": [
+      "$key"
+    ],
+    "qSrcTables": [
+      "answers"
+    ]
+  },
+  {
+    "qName": "subtype",
+    "qCardinal": 4,
+    "qTags": [
+      "$key",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "questions"
+    ]
+  },
+  {
+    "qName": "survey_id",
+    "qCardinal": 2,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$key"
+    ],
+    "qSrcTables": [
+      "data_IDS",
+      "data"
+    ]
+  },
+  {
+    "qName": "text",
+    "qCardinal": 0,
+    "qTags": [
+      "$key"
+    ],
+    "qSrcTables": [
+      "answers"
+    ]
+  },
+  {
+    "qName": "total",
+    "qCardinal": 1,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$key"
+    ],
+    "qSrcTables": [
+      "root"
+    ]
+  },
+  {
+    "qName": "total_time",
+    "qCardinal": 48,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$key"
+    ],
+    "qSrcTables": [
+      "data"
+    ]
+  },
+  {
+    "qName": "type",
+    "qCardinal": 1,
+    "qTags": [
+      "$key",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Fisrt_name_New"
+    ]
+  },
+  {
+    "qName": "type_u0",
+    "qCardinal": 1,
+    "qTags": [
+      "$key",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Last_name_New"
+    ]
+  },
+  {
+    "qName": "type_u1",
+    "qCardinal": 1,
+    "qTags": [
+      "$key",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "custom_value4"
+    ]
+  },
+  {
+    "qName": "type_u2",
+    "qCardinal": 1,
+    "qTags": [
+      "$key",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "custom_value2"
+    ]
+  },
+  {
+    "qName": "type_u3",
+    "qCardinal": 1,
+    "qTags": [
+      "$key",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "custom_value"
+    ]
+  },
+  {
+    "qName": "type_u4",
+    "qCardinal": 1,
+    "qTags": [
+      "$key",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "CompanyMappingNew"
+    ]
+  },
+  {
+    "qName": "type_u5",
+    "qCardinal": 1,
+    "qTags": [
+      "$key",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "custom_value5"
+    ]
+  },
+  {
+    "qName": "type_u6",
+    "qCardinal": 1,
+    "qTags": [
+      "$key",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "email"
+    ]
+  },
+  {
+    "qName": "type_u7",
+    "qCardinal": 0,
+    "qTags": [
+      "$key"
+    ],
+    "qSrcTables": [
+      "custom_value6"
+    ]
+  },
+  {
+    "qName": "value",
+    "qCardinal": 14,
+    "qTags": [
+      "$key",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Fisrt_name_New"
+    ]
+  },
+  {
+    "qName": "value_u0",
+    "qCardinal": 14,
+    "qTags": [
+      "$key",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Last_name_New"
+    ]
+  },
+  {
+    "qName": "value_u1",
+    "qCardinal": 10,
+    "qTags": [
+      "$key",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "custom_value4"
+    ]
+  },
+  {
+    "qName": "value_u2",
+    "qCardinal": 3,
+    "qTags": [
+      "$key",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "custom_value2"
+    ]
+  },
+  {
+    "qName": "value_u3",
+    "qCardinal": 35,
+    "qTags": [
+      "$key",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "custom_value"
+    ]
+  },
+  {
+    "qName": "value_u3_SM",
+    "qCardinal": 35,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "email"
+    ]
+  },
+  {
+    "qName": "value_u4",
+    "qCardinal": 43,
+    "qTags": [
+      "$key",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "CompanyMappingNew"
+    ]
+  },
+  {
+    "qName": "value_u5",
+    "qCardinal": 15,
+    "qTags": [
+      "$key",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "custom_value5"
+    ]
+  },
+  {
+    "qName": "value_u6",
+    "qCardinal": 35,
+    "qTags": [
+      "$key",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "email"
+    ]
+  },
+  {
+    "qName": "value_u6_Mapped",
+    "qCardinal": 35,
+    "qTags": [
+      "$key",
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "ContactsMerging",
+      "email"
+    ]
+  },
+  {
+    "qName": "value_u6_Mapped_NotAnswered",
+    "qCardinal": 35,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "email"
+    ]
+  },
+  {
+    "qName": "value_u7",
+    "qCardinal": 0,
+    "qTags": [
+      "$key"
+    ],
+    "qSrcTables": [
+      "custom_value6"
+    ]
+  }
+]

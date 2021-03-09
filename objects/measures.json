@@ -1,0 +1,413 @@
+[
+  {
+    "qInfo": {
+      "qId": "PpfxrNz",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "Expected CSAT",
+      "qDef": "\n\npick (\n\n$(v_Switch_Option_BU_SU)\n\n\n,Max({$< Year ={$(v_Max_Year)}, [Entity Type] = {'Business Unit'}    >}  [Expected CSAT])\n\n,Max({$< Year ={$(v_Max_Year)}, [Entity Type] = {'Service Unit'}    >}  [Expected CSAT])\n\n,Max({$< Year ={$(v_Max_Year)}    >}  [Expected CSAT])\n\n\n\n)",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "qNumFormat": {
+        "qType": "U",
+        "qnDec": 10,
+        "qUseThou": 0
+      },
+      "coloring": {
+        "baseColor": {
+          "color": "#ff0000",
+          "index": -1
+        }
+      }
+    },
+    "qMetaDef": {
+      "title": "Expected CSAT",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "QrmSJkp",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "% Promoters",
+      "qDef": "$(v_Promoters_BarChart_P)",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "qNumFormat": {
+        "qType": "U",
+        "qnDec": 10,
+        "qUseThou": 0
+      },
+      "coloring": {
+        "baseColor": {
+          "color": "#228B22",
+          "index": -1
+        }
+      }
+    },
+    "qMetaDef": {
+      "title": "% Promoters",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "SgEbn",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "Promoters",
+      "qDef": "$(v_Promoters)",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "qNumFormat": {
+        "qType": "U",
+        "qnDec": 10,
+        "qUseThou": 0
+      },
+      "coloring": {
+        "baseColor": {
+          "color": "#228B22",
+          "index": -1
+        }
+      }
+    },
+    "qMetaDef": {
+      "title": "Promoters",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "WyFyGh",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "Detractors",
+      "qDef": "$(v_Detractors)",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "qNumFormat": {
+        "qType": "U",
+        "qnDec": 10,
+        "qUseThou": 0
+      },
+      "coloring": {
+        "baseColor": {
+          "color": "#FF0000",
+          "index": -1
+        }
+      }
+    },
+    "qMetaDef": {
+      "title": "Detractors",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "bWsznFH",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "Passives",
+      "qDef": "$(v_Passives)",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "qNumFormat": {
+        "qType": "U",
+        "qnDec": 10,
+        "qUseThou": 0
+      },
+      "coloring": {
+        "baseColor": {
+          "color": "#FFFF66",
+          "index": -1
+        }
+      }
+    },
+    "qMetaDef": {
+      "title": "Passives",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "dzUqGJ",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "CES Score",
+      "qDef": "sum({$< Year ={$(v_Max_Year)}  >}   IF ( WildMatch(heading,'*business with us*')    , Score   ))\n/\nCOUNT({$< Year ={$(v_Max_Year)}  >}   IF ( WildMatch(heading,'*business with us*')    , __KEY_metadata   ))\n",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "qNumFormat": {
+        "qType": "U",
+        "qnDec": 10,
+        "qUseThou": 0
+      },
+      "coloring": {
+        "gradient": {
+          "colors": [
+            {
+              "color": "#9c0000",
+              "index": -1
+            },
+            {
+              "color": "#FF0000",
+              "index": -1
+            },
+            {
+              "color": "#FFFF00",
+              "index": -1
+            },
+            {
+              "color": "#31c731",
+              "index": -1
+            },
+            {
+              "color": "#228B22",
+              "index": -1
+            },
+            {
+              "color": "#7db8da",
+              "index": 5
+            }
+          ],
+          "breakTypes": [
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "limits": [
+            0.2,
+            0.4,
+            0.6,
+            0.8,
+            1
+          ],
+          "limitType": "percent"
+        }
+      }
+    },
+    "qMetaDef": {
+      "title": "CES Score",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "fxVvxG",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "CSAT",
+      "qDef": "$(v_CSAT_Score)",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "qNumFormat": {
+        "qType": "U",
+        "qnDec": 10,
+        "qUseThou": 0
+      },
+      "coloring": {
+        "baseColor": {
+          "color": "#4477aa",
+          "index": 6
+        }
+      }
+    },
+    "qMetaDef": {
+      "title": "CSAT",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "hqVCcZ",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "% Passives",
+      "qDef": "$(v_Passives_BarChart_P)",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "qNumFormat": {
+        "qType": "U",
+        "qnDec": 10,
+        "qUseThou": 0
+      },
+      "coloring": {
+        "baseColor": {
+          "color": "#FFFF66",
+          "index": -1
+        }
+      }
+    },
+    "qMetaDef": {
+      "title": "% Passives",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "jZXhdgy",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "CSAT Promoters %",
+      "qDef": "pick (\r\n\n$(v_Switch_Option_BU_SU)\n\n\n,count ( if (  aggr( avg({$<  Year ={$(v_Max_Year)}   , [Question Type] = {'CSAT'}  , [Entity Type] = {'Business Unit'} >}    Score )  ,[__KEY_metadata] , Entity, [Answer Options])  >=9  , 1 ))\n/\ncount (  aggr( avg({$<  Year ={$(v_Max_Year)}   , [Question Type] = {'CSAT'}  , [Entity Type] = {'Business Unit'} >}    Score )  ,[__KEY_metadata] , Entity, [Answer Options])   )\n  \n,count ( if (  aggr( avg({$<  Year ={$(v_Max_Year)}   , [Question Type] = {'CSAT'}  , [Entity Type] = {'Service Unit'} >}    Score )  ,[__KEY_metadata] , Entity, [Answer Options])  >=9  , 1 ))\n/\ncount (  aggr( avg({$<  Year ={$(v_Max_Year)}   , [Question Type] = {'CSAT'}  , [Entity Type] = {'Service Unit'} >}    Score )  ,[__KEY_metadata] , Entity, [Answer Options])   )\n  \n,count ( if (  aggr( avg({$<  Year ={$(v_Max_Year)}   , [Question Type] = {'CSAT'}  >}    Score )  ,[__KEY_metadata] , Entity, [Answer Options])  >=9  , 1 ))\n/\ncount (  aggr( avg({$<  Year ={$(v_Max_Year)}   , [Question Type] = {'CSAT'}  >}    Score )  ,[__KEY_metadata] , Entity, [Answer Options])   )\n            \n \n)\n\n",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "qNumFormat": {
+        "qType": "U",
+        "qnDec": 10,
+        "qUseThou": 0
+      },
+      "coloring": {
+        "baseColor": {
+          "color": "#228B22",
+          "index": -1
+        }
+      }
+    },
+    "qMetaDef": {
+      "title": "CSAT Promoters %",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "rxrdeH",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "% Detractors",
+      "qDef": "$(v_Detractors_BarChart_P)",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "qNumFormat": {
+        "qType": "U",
+        "qnDec": 10,
+        "qUseThou": 0
+      },
+      "coloring": {
+        "baseColor": {
+          "color": "#FF0000",
+          "index": -1
+        }
+      }
+    },
+    "qMetaDef": {
+      "title": "% Detractors",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "sTfVuWE",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "Respondents Categories",
+      "qDef": "$(v_Total_Respondents)",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "qNumFormat": {
+        "qType": "U",
+        "qnDec": 10,
+        "qUseThou": 0
+      },
+      "coloring": {}
+    },
+    "qMetaDef": {
+      "title": "Respondents Categories",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "tCwJJ",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "CSAT Passives %",
+      "qDef": "pick (\r\n\n$(v_Switch_Option_BU_SU)\n\n\n,count ( \n\n\nif (  aggr(  avg({$<  Year ={$(v_Max_Year)}   , [Question Type] = {'CSAT'}, [Entity Type] = {'Business Unit'}  >}    Score )  ,[__KEY_metadata] , Entity , [Answer Options])  >6  \nAND  aggr( avg({$<  Year ={$(v_Max_Year)}   , [Question Type] = {'CSAT'} , [Entity Type] = {'Business Unit'} >}    Score )  ,[__KEY_metadata] , Entity, [Answer Options] ) <9\n, 1 ))\n            \n/\ncount (  aggr( avg({$<  Year ={$(v_Max_Year)}   , [Question Type] = {'CSAT'} , [Entity Type] = {'Business Unit'}  >}    Score )  ,[__KEY_metadata] , Entity, [Answer Options])   )\n\n,count ( \n\n\nif (  aggr(  avg({$<  Year ={$(v_Max_Year)}   , [Question Type] = {'CSAT'}, [Entity Type] = {'Service Unit'}  >}    Score )  ,[__KEY_metadata] , Entity , [Answer Options])  >6  \nAND  aggr( avg({$<  Year ={$(v_Max_Year)}   , [Question Type] = {'CSAT'} , [Entity Type] = {'Service Unit'} >}    Score )  ,[__KEY_metadata] , Entity, [Answer Options] ) <9\n, 1 ))\n            \n/\ncount (  aggr( avg({$<  Year ={$(v_Max_Year)}   , [Question Type] = {'CSAT'} , [Entity Type] = {'Service Unit'}  >}    Score )  ,[__KEY_metadata] , Entity, [Answer Options])   )\n\n,count ( \nif (  aggr(  avg({$<  Year ={$(v_Max_Year)}   , [Question Type] = {'CSAT'} >}    Score )  ,[__KEY_metadata] , Entity , [Answer Options])  >6  \nAND  aggr( avg({$<  Year ={$(v_Max_Year)}   , [Question Type] = {'CSAT'} >}    Score )  ,[__KEY_metadata] , Entity, [Answer Options] ) <9, 1 ))\n            \n/\ncount (  aggr( avg({$<  Year ={$(v_Max_Year)}   , [Question Type] = {'CSAT'}  >}    Score )  ,[__KEY_metadata] , Entity, [Answer Options])   )\n)\n\n",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "qNumFormat": {
+        "qType": "U",
+        "qnDec": 10,
+        "qUseThou": 0
+      },
+      "coloring": {
+        "baseColor": {
+          "color": "#FFFF66",
+          "index": -1
+        }
+      }
+    },
+    "qMetaDef": {
+      "title": "CSAT Passives %",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "venc",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "CSAT Deractors %",
+      "qDef": "pick (\r\n\n$(v_Switch_Option_BU_SU)\n\n\n,count ( if (  aggr( avg({$<  Year ={$(v_Max_Year)}   , [Question Type] = {'CSAT'} ,  [Entity Type] = {'Business Unit'}  >}    Score )  ,[__KEY_metadata] , Entity, [Answer Options])  <=6  , 1 ))\n/\ncount (  aggr( avg({$<  Year ={$(v_Max_Year)}   , [Question Type] = {'CSAT'} ,  [Entity Type] = {'Business Unit'}  >}    Score )  ,[__KEY_metadata] , Entity, [Answer Options])   )\n\n\n,count ( if (  aggr( avg({$<  Year ={$(v_Max_Year)}   , [Question Type] = {'CSAT'} ,  [Entity Type] = {'Service Unit'}  >}    Score )  ,[__KEY_metadata] , Entity, [Answer Options])  <=6  , 1 ))\n/\ncount (  aggr( avg({$<  Year ={$(v_Max_Year)}   , [Question Type] = {'CSAT'} ,  [Entity Type] = {'Service Unit'}  >}    Score )  ,[__KEY_metadata] , Entity, [Answer Options])   )\n\n,count ( if (  aggr( avg({$<  Year ={$(v_Max_Year)}   , [Question Type] = {'CSAT'}  >}    Score )  ,[__KEY_metadata] , Entity, [Answer Options])  <=6  , 1 ))\n/\ncount (  aggr( avg({$<  Year ={$(v_Max_Year)}   , [Question Type] = {'CSAT'}  >}    Score )  ,[__KEY_metadata] , Entity, [Answer Options])   )\n\n\n)\n\n",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "qNumFormat": {
+        "qType": "U",
+        "qnDec": 10,
+        "qUseThou": 0
+      },
+      "coloring": {
+        "baseColor": {
+          "color": "#FF0000",
+          "index": -1
+        }
+      }
+    },
+    "qMetaDef": {
+      "title": "CSAT Deractors %",
+      "description": "",
+      "tags": []
+    }
+  }
+]
